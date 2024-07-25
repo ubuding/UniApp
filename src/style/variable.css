@@ -1,0 +1,13 @@
+.light {
+  --page: #f6f6f6;
+  --text-color: #000;
+  --primary-color: #0ea5e9;
+  --navigation: #fff;
+}
+
+.dark {
+  --page: #000;
+  --text-color: #fff;
+  --primary-color: #e90e0e;
+  --navigation: #1b1b1b;
+}

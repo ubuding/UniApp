@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4584441 */
+  src: url("./iconfont.ttf");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px default;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-like:before {
+  content: "\e652";
+}
+
+.icon-mine:before {
+  content: "\e600";
+}
+
+.icon-home:before {
+  content: "\e624";
+}
+
+.icon-message:before {
+  content: "\e625";
+}
+
+.icon-hot:before {
+  content: "\e8c9";
+}

@@ -1,0 +1,67 @@
+{
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^U(.*)": "@/components/U$1/index.vue"
+    }
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#00000000",
+    "selectedColor": "#00000000",
+    "list": [
+      {
+        "pagePath": "pages/overview/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/hot/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/logo.png",
+        "selectedIconPath": "static/logo.png",
+        "text": ""
+      }
+    ]
+  },
+  "pages": [
+    {
+      "path": "pages/overview/index",
+      "type": "home",
+      "layout": "modules",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "Home"
+      }
+    },
+    {
+      "path": "pages/hot/index",
+      "type": "page",
+      "layout": "default",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "type": "page",
+      "layout": "modules",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "subPackages": []
+}

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  src: url("/static/fonts/Orbitron.ttf");
+}
+
+:root,
+page {
+  font-family: "Orbitron" !important;
+}
