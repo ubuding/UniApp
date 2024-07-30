@@ -37,7 +37,8 @@ export default defineConfig({
   },
   shortcuts: [
     {
-      center: "flex justify-center items-center",
+      "flex-center": "flex justify-center items-center",
+      "flex-1": "flex w-full h-full flex-1",
     },
     // [/^btn-(.*)$/, ([, c]) => `bg-${c}-400 text-${c}-100 py-2 px-4 rounded-lg`],
   ],

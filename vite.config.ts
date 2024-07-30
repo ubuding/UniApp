@@ -6,9 +6,9 @@ import UnoCSS from "unocss/vite"; /**                             @LINK https://
 import UniLayouts from "@uni-helper/vite-plugin-uni-layouts";
 export default defineConfig({
   plugins: [
-    // UniLayouts({
-    //   layout: "default",
-    // }),
+    UniLayouts({
+      layout: "default",
+    }),
     UniPages({
       exclude: ["**/components/**"],
     }),

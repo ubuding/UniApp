@@ -1,3 +1,5 @@
 <template>
-  <slot>main</slot>
+  <UConfigurator>
+    <slot>main</slot>
+  </UConfigurator>
 </template>

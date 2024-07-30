@@ -1,6 +1,6 @@
 <!-- variable.css uno.config.ts -->
 <template>
-  <div :class="'w-full h-full ' + global.mode">
+  <div :class="'w-full h-full bg-page text-color ' + global.mode">
     <slot>u-configurator</slot>
   </div>
 </template>

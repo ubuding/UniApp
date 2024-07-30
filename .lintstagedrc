@@ -1,0 +1,5 @@
+{
+  "*.{vue,js,ts}": ["eslint --quiet", "prettier --write"],
+  "*.{scss,less,css,html}": ["prettier --write"],
+  "*.md": ["prettier --write"]
+}

@@ -2,8 +2,6 @@ import { defineStore } from "pinia";
 
 interface State {
   mode: "light" | "dark";
-  tabIndex: number;
-  tabLoaded: boolean;
   token: string;
 }
 
@@ -11,8 +9,6 @@ export const useGlobalStore = defineStore("global", {
   state: (): State => {
     return {
       mode: "light",
-      tabIndex: 0,
-      tabLoaded: true,
       token: "",
     };
   },

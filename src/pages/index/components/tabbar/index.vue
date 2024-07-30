@@ -9,7 +9,7 @@
 
     <view class="w-full h-52px relative flex justify-between">
       <view
-        class="center absolute"
+        class="flex-center absolute"
         :style="{
           width: (1 / items.length) * 100 + '%',
           transition: 'left 0.5s',
@@ -20,20 +20,20 @@
       </view>
       <view
         v-for="(item, index) in items"
-        :key="item.label"
+        :key="item.key"
         @click="onClick(item, index)"
         class="flex flex-1 w-full h-full flex-col items-center justify-end"
       >
         <view
-          class="absolute center"
+          class="absolute flex-center"
           :style="{
             transition: 'top 0.5s',
-            top: global.tabIndex === index ? '-12px' : '16px',
+            top: item.key === type ? '-12px' : '16px',
           }"
         >
           <view
             :style="
-              global.tabIndex === index
+              item.key === type
                 ? {
                     transition: 'color 0.25s',
                     color: 'white',
@@ -46,8 +46,7 @@
         <view
           style="transition: all 0.5s"
           :class="
-            (global.tabIndex === index ? 'opacity-100' : 'opacity-0') +
-            ' text-14px'
+            (item.key === type ? 'opacity-100' : 'opacity-0') + ' text-14px'
           "
         >
           {{ item.label }}</view
@@ -60,27 +59,26 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 import { tabbar } from "@/constant/tabbar";
-const items = ref(tabbar);
-const left = computed(() => (global.tabIndex / items.value.length) * 100 + "%");
 
-const clicked = ref(false);
-const onClick = (item: any, index: number) => {
-  if (clicked.value) return;
-  clicked.value = true;
-  uni.switchTab({
-    url: "/" + item.path,
-    success: () => {
-      console.log(index, "index?");
-      global.tabIndex = index;
-    },
-    complete: () => {
-      clicked.value = false;
-    },
-  });
+defineProps({
+  type: {
+    type: String,
+    default: "overview",
+  },
+});
+
+const emit = defineEmits<{
+  change: [value: string];
+}>();
+const items = ref(tabbar);
+
+const index = ref(0);
+const left = computed(() => (index.value / items.value.length) * 100 + "%");
+const onClick = (item: any, i: number) => {
+  index.value = i;
+  emit("change", item.key);
 };
 
-import { useGlobalStore } from "@/store";
-const global = useGlobalStore();
 const safeBottom = ref(0);
 onMounted(() => {
   const { safeAreaInsets } = uni.getSystemInfoSync();

@@ -6,4 +6,4 @@ pinia.use(piniaPluginPersistedstate);
 
 export default pinia;
 
-export { useGlobalStore } from "./global";
+export { useGlobalStore } from "@/pages/index/store";

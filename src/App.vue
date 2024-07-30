@@ -4,26 +4,6 @@ import { useGlobalStore } from "@/store";
 const global = useGlobalStore();
 onLaunch(() => {
   console.log("App Launch");
-  global.tabIndex = 0;
-  // global.tabLoaded = true;
-
-  // uni
-  //   .switchTab({
-  //     url: "/" + "pages/mine/index",
-  //   })
-  //   .finally(() => {
-  //     uni
-  //       .switchTab({
-  //         url: "/" + "pages/hot/index",
-  //       })
-  //       .finally(() => {
-  //         uni.switchTab({
-  //           url: "/" + "pages/overview/index",
-  //         });
-
-  //         global.tabLoaded = true;
-  //       });
-  //   });
 });
 onShow(() => {
   console.log("App Show");
